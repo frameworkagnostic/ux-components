@@ -4,10 +4,13 @@
 node_modules
 
 ####################################
-# Reports
+# Reports / Test
 ####################################
 coverage
 testresults/*.xml
+testresults/*.json
+testresults/*.html
+test/.cached
 
 ####################################
 # Build
@@ -16,6 +19,7 @@ build
 dist
 .tmp
 tmp
+./.tgz
 
 ####################################
 # Environment

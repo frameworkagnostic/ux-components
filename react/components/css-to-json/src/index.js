@@ -49,7 +49,7 @@ function reduceRulesToSelectors (selectors, rule) {
   }
   var styleObject = rule.declarations.reduce(reduceDeclarationsToStyleObject, {});
   rule.selectors.forEach((selector) => {
-    console.log('value>>>>>>>>>>>>>>>>>>>>>>>', selector);
+  //  console.log('value>>>>>>>>>>>>>>>>>>>>>>>', selector);
 
     selectors[selector.replace(/^./, '')] = Object.assign({},
       selectors[selector.replace(/^./, '')],
