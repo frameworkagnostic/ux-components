@@ -1,0 +1,6 @@
+<testsuites name="jest tests">
+  <testsuite name="/src/__tests__/index.spec.js" tests="1" errors="0" failures="0" skipped="0" timestamp="2017-09-15T11:50:24" time="0.198">
+    <testcase classname="-load index module" name="-load index module" time="0.003">
+    </testcase>
+  </testsuite>
+</testsuites>

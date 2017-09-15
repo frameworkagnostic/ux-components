@@ -1,26 +1,21 @@
 {
-  "name": "@thinkeloquent/react-composite",
+  "name": "@thinkeloquent/css-to-json",
   "version": "0.1.0",
   "main": "./index.js",
   "scripts": {
-    "prelerna": "npm install",
-    "lerna": "lerna bootstrap",
-    "pretest": "bash ./tools/bin/pretest.sh",
-    "test": "bash ./tools/bin/test.sh",
+    "pretest": "npm run lint && npm run webpack && npm run build",
+    "test": "npm run jest",
     "lint": "eslint --ignore-path .eslintignore src",
     "jest": "jest --coverage",
     "jest:unit": "npm run jest --- -t '#unit'",
     "jest:watch": "npm run jest:unit -- --watch",
-    "mocha:server": "node ./node_modules/babel-cli/bin/babel-node ./node_modules/mocha/bin/mocha --opts ./test/mocha-server.opts",
-    "mocha:saucelabs": "node ./node_modules/global-shop-cicd/packages/npm-scripts/selenium/mocha-saucelabs",
-    "build": "bash ./tools/bin/build.sh",
+    "clean:dist": "rm -rf ./dist && mkdir -p ./dist",
+    "build": "npm run clean:dist && npm run es5",
     "uat": "npm run webpack:dev",
-    "webpack": "node ./node_modules/webpack/bin/webpack --progress --colors --optimize-minimize --config ./webpack.config.js",
+    "webpack": "webpack --progress --colors --config ./webpack.devserver.config.js",
     "webpack:dev": "webpack-dev-server --progress --colors --config ./webpack.devserver.config.js",
-    "storybook:start": "start-storybook -p 6006",
-    "storybook:build": "build-storybook",
-    "docs": "node ./tools/jsdoc-md.js",
-    "es5": "node ./node_modules/babel-cli/bin/babel ./src --out-dir ./dist/es5 --copy-files --ignore .spec"
+    "docs": "TBD",
+    "es5": "node ./node_modules/babel-cli/bin/babel ./src --out-dir ./dist --copy-files --ignore .spec"
   },
   "license": "ISC",
   "devDependencies": {
@@ -39,41 +34,28 @@
     "babel-register": "^6.26.0",
     "chai": "^4.1.0",
     "chalk": "^2.1.0",
-    "css-loader": "^0.28.7",
-    "css-object-loader": "0.0.7",
     "documentation": "^5.3.1",
     "eslint": "^4.2.0",
     "eslint-plugin-react": "^7.1.0",
     "jest": "^21.0.2",
     "jest-junit": "^3.0.0",
-    "lerna": "^2.0.0-rc.5",
     "mocha": "^3.5.2",
-    "node-sass": "^4.5.3",
     "postcss-flexbugs-fixes": "^3.2.0",
     "postcss-loader": "^2.0.6",
-    "radium": "^0.19.4",
     "react-addons-test-utils": "^15.6.0",
     "react-test-renderer": "^15.6.1",
-    "sass-loader": "^6.0.6",
-    "style-loader": "^0.18.2",
     "webpack": "^3.5.6",
-    "webpack-dev-server": "^2.7.1"
+    "webpack-dev-server": "^2.7.1",
+    "react": "^15.3.2",
+    "react-dom": "^15.3.2"
   },
   "dependencies": {
-    "moment": "^2.18.1",
-    "postcss-loader": "^2.0.6",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
-    "request": "^2.81.0",
-    "uuid": "^3.1.0"
+    "camelcase": "^2.1.1",
+    "css": "^2.2.1"
   },
   "jest": {
     "verbose": true,
-    "testRegex": "/__tests__/.*\\.(spec\\.js)$",
-    "setupFiles": [
-      "./test/__setup__/jest-browser-performance.js",
-      "./test/__setup__/jest-global-features.js"
-    ],
+    "testRegex": ".*/__tests__/.*\\.(spec\\.js)$",
     "transformIgnorePatterns": [
       "/node_modules/",
       "webpack.config.js"
@@ -85,12 +67,12 @@
     ],
     "testResultsProcessor": "jest-junit",
     "collectCoverageFrom": [
-      "src/*.js",
-      "src/**/*.js"
+      "./src/*.js",
+      "./src/**/*.js"
     ],
     "coverageThreshold": {
       "global": {
-        "branches": 50,
+        "branches": 100,
         "functions": 100,
         "lines": 100,
         "statements": 100

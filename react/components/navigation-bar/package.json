@@ -57,10 +57,6 @@
   "jest": {
     "verbose": true,
     "testRegex": "/__tests__/.*\\.(spec\\.js)$",
-    "setupFiles": [
-      "./test/__setup__/jest-browser-performance.js",
-      "./test/__setup__/jest-global-features.js"
-    ],
     "transformIgnorePatterns": [
       "/node_modules/",
       "webpack.config.js"

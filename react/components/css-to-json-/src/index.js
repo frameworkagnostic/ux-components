@@ -1,13 +1,10 @@
 'use strict;';
 
-// CSS Parser
+
 var css = require('css');
-// Convert words to camelCase
 var camelCase = require('camelcase');
 
-// To accomplish loading CSS to an Object, the process is:
-//   1. Parse CSS stylesheet to AST
-//   2. Flatten AST to Object of shape { [rule.selector]: rule.declarations }
+
 module.exports = function cssObjectLoader (source) {
   /* istanbul ignore next */
   this.cacheable && this.cacheable();
