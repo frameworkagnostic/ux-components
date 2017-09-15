@@ -19,7 +19,7 @@ build
 dist
 .tmp
 tmp
-./.tgz
+*.tgz
 
 ####################################
 # Environment
