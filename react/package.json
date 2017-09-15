@@ -1,0 +1,15 @@
+{
+  "name": "react",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+		"prelerna": "npm install",
+		"lerna": "lerna bootstrap"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+	"devDependencies": {
+		"lerna": "^2.0.0-rc.5"
+	}
+}
