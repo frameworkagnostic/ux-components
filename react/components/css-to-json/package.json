@@ -19,7 +19,7 @@
     "docs": "node ./tools/jsdoc-md.js",
     "es5": "node ./node_modules/babel-cli/bin/babel ./src --out-dir ./dist/es5 --copy-files --ignore .spec",
     "benchmark": "node ../matcha/bin/matcha --saveTo ./testresults/benchmark.json --reporter json,clean ./src/__tests__/*.benchmark.js",
-    "pack": "npm pack"
+    "pack": "mkdir -p bundles && npm pack && mv ./thinkeloquent-css-to-json-*.tgz ./bundles/"
   },
   "license": "ISC",
   "devDependencies": {

@@ -45,7 +45,8 @@
     "react-addons-test-utils": "^15.6.0",
     "react-test-renderer": "^15.6.1",
     "webpack": "^3.5.6",
-    "webpack-dev-server": "^2.7.1"
+    "webpack-dev-server": "^2.7.1",
+    "@thinkeloquent/css-to-json": "../css-to-json/bundles/thinkeloquent-css-to-json-0.1.0.tgz"
   },
   "dependencies": {
     "moment": "^2.18.1",
