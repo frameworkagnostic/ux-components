@@ -4,8 +4,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import WebComponent from '../../src/web';
+import WebComponent from '../../src/top-navigation/top-navigation.web';
 
+console.log(WebComponent);
 function App(props) {
   return (
     <WebComponent {...props} />
