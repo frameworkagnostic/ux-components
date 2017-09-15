@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "main": "./index.js",
   "scripts": {
+    "preinstall": "npm run pack",
     "pretest": "bash ./tools/bin/pretest.sh",
     "test": "bash ./tools/bin/test.sh",
     "lint": "eslint --ignore-path .eslintignore src",
