@@ -1,5 +1,5 @@
 {
-  "name": "@thinkeloquent/react-section",
+  "name": "credit-card-tile",
   "version": "0.1.0",
   "main": "./index.js",
   "scripts": {

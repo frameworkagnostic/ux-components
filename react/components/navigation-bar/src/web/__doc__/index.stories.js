@@ -3,7 +3,7 @@ import { storiesOf, action, linkTo } from '@storybook/react';
 
 import ComponentStory from './component';
 
-storiesOf('Button', module)
+storiesOf('Navigation Bar', module)
   .add('basic', () => (
     <ComponentStory />
   ));

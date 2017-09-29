@@ -1,0 +1,31 @@
+
+.container {
+  width: 280px;
+  background: #eceff2;
+  position: relative;
+  margin-top: 40px;
+}
+
+.creditCardWrapper {
+  display: flex;
+}
+
+
+.creditCardImage {
+  width: 100%;
+  POSITION: relative;
+  top: -35px;
+  max-width: 140px;
+}
+
+.link {
+  color: #fff;
+  background: #e39f1a;
+  border-color: #e39f1a;
+  height: 50px;
+  cursor: pointer;
+  border: 1px solid;
+  position: relative;
+  display: inline-block;
+  width: 48%;
+}

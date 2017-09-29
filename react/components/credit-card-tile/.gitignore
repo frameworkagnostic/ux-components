@@ -4,5 +4,5 @@ dist
 lerna-debug.log
 npm-debug.log
 /.idea/
-*.tgz
-.bundles
+dist
+es5
